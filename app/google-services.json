@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "510241362774",
+    "project_id": "musicplayer-babbd",
+    "storage_bucket": "musicplayer-babbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510241362774:android:588c32ab0bc293b7cc3cf7",
+        "android_client_info": {
+          "package_name": "com.example.musicplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510241362774-7v5hvmr8e0irot2bu2of76fi55llpif4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB89q5F9S6lB3H7eLCnsf_D3u7etS9HOGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510241362774-7v5hvmr8e0irot2bu2of76fi55llpif4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
