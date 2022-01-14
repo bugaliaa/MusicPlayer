@@ -1,7 +1,5 @@
 package com.example.musicplayer.ui.viewmodels
 
-
-
 import android.support.v4.media.MediaBrowserCompat
 import android.support.v4.media.MediaMetadataCompat.METADATA_KEY_MEDIA_ID
 import androidx.lifecycle.LiveData
@@ -65,7 +63,7 @@ class MainViewModel @Inject constructor(
 
     fun playOrToggleSong(mediaItem: Song, toggle: Boolean = false){
         val isPrepared = playbackState.value?.isPrepared ?: false
-        if(isPrepared && mediaItem.file_id ==
+        if(isPrepared && mediaItem.mediaId ==
             curPlayingSong.value?.getString(METADATA_KEY_MEDIA_ID)){
             playbackState.value?.let { playbackState ->
                 when{
@@ -75,7 +73,7 @@ class MainViewModel @Inject constructor(
                 }
             }
         }else{
-            musicServiceConnection.transportControls.playFromMediaId(mediaItem.file_id, null)
+            musicServiceConnection.transportControls.playFromMediaId(mediaItem.mediaId, null)
         }
     }
 

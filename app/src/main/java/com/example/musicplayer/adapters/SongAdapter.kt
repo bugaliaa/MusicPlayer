@@ -20,7 +20,7 @@ class SongAdapter @Inject constructor(
 
     private val diffCallback = object : DiffUtil.ItemCallback<Song>() {
         override fun areItemsTheSame(oldItem: Song, newItem: Song): Boolean {
-            return oldItem.file_id == newItem.file_id
+            return oldItem.mediaId == newItem.mediaId
         }
 
         override fun areContentsTheSame(oldItem: Song, newItem: Song): Boolean {
@@ -48,8 +48,8 @@ class SongAdapter @Inject constructor(
         val song = songs[position]
         holder.itemView.apply {
             tvPrimary.text = song.title
-            tvSecondary.text = song.artist
-            glide.load(song.thumb_url).into(ivItemImage)
+            tvSecondary.text = song.subtitle
+            glide.load(song.imageUrl).into(ivItemImage)
 
             setOnClickListener {
                 onItemClickListener?.let { click ->

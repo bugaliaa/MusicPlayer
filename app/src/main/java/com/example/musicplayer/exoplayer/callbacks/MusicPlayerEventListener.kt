@@ -9,7 +9,7 @@ class MusicPlayerEventListener(
     private val musicService: MusicService
 ) : Player.Listener{
     override fun onPlayerStateChanged(playWhenReady: Boolean, playbackState: Int) {
-        super.onPlayerStateChanged(playWhenReady, playbackState)
+        super.onPlayWhenReadyChanged(playWhenReady, playbackState)
         if(playbackState == Player.STATE_READY && !playWhenReady){
             musicService.stopForeground(false)
         }
