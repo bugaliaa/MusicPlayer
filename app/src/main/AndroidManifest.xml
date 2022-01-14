@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:name=".MusicPlayerApplication"
         android:allowBackup="true"
@@ -13,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MusicPlayer"
         android:fullBackupContent="@xml/backup_descriptor">
+        <service android:name=".exoplayer.MusicService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+        </service>
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
